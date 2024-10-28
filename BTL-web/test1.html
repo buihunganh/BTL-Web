@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách có thể mở rộng</title>
+    <style>
+        .child-list {
+            display: none; /* Ẩn các mục con mặc định */
+            padding-left: 20px; /* Thêm khoảng cách cho mục con */
+        }
+        #item1:target .child-list {
+            display: block; /* Hiện các mục con khi mục cha được nhấp */
+        }
+
+        #item2:target .child-list {
+            display: block; /* Hiện các mục con khi mục cha được nhấp */
+        }
+
+        a {
+            cursor: pointer; /* Thay đổi con trỏ để biểu thị có thể nhấp */
+            text-decoration: none; /* Bỏ gạch chân cho liên kết */
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li id="item1">
+        <a href="#item1">Mục cha 1</a>
+        <ul class="child-list">
+            <li>Mục con 1.1</li>
+            <li>Mục con 1.2</li>
+        </ul>
+    </li>
+    <li id="item2">
+        <a href="#item2">Mục cha 2</a>
+        <ul class="child-list">
+            <li>Mục con 2.1</li>
+            <li>Mục con 2.2</li>
+        </ul>
+    </li>
+</ul>
+
+</body>
+</html>
